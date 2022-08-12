@@ -1,0 +1,282 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% load i18n %}
+
+{% block title %}{% trans "PDC - Applications " %}{% endblock %}
+{% block content %}
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center" >
+        <div class="col-12">
+          <div class="p-3 mb-2 bg-light text-dark">
+           {% for applicationspost in applicationsposts %}
+        <h3 align="center" >
+                  <a>
+                    {{ applicationspost.title }}
+                  </a>
+                </h3>
+                <h7>
+                    <a>{{ applicationspost.body }}
+                    </a>
+                </h7>
+               {% endfor %}
+        </div>
+          </div>
+      </div>
+    </div>
+  </div>
+<br>
+<section class="mb-4">
+    <div class="container" >
+      <div class="row">
+
+        <div class="col-4">
+          <div class="dento-price-table table-responsive">
+            <table  class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Aplikacione</th>
+                </tr>
+              </thead>
+
+              <tbody>
+              {% for i in applications %}
+                <tr align="left">
+                  <th>
+                    <div class="row">
+                      <div style="color: #2aafe8">⇒</div>
+                      <div class="ml-1">
+                        {{ i.link_comment | safe}}
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="dento-price-table table-responsive">
+            <table  class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Manuale</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for manuale in manuales %}
+                <tr align="left">
+                   <th>
+                    <div class="row align-items-center">
+                      <div class="col-1" style="color: #2aafe8">⇒</div>
+                      <div class="col-10">
+                        {{ manuale.link | safe}}
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+	<br>
+
+	 <div class="dento-price-table table-responsive">
+            <table  class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Sherbime</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for sherbime in sherbimes %}
+                <tr align="left">
+                  <th>
+                    <div class="row">
+                      <div style="color: #2aafe8">⇒</div>
+                      <div class="ml-1">
+                        {{ sherbime.link | safe}}
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+         <div class="col-4">
+          <div class="dento-price-table table-responsive">
+            <table  class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Test Zone</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for testzone in tests %}
+                <tr align="left">
+                  <th>
+                    <div class="row">
+                      <div style="color: #2aafe8">⇒</div>
+                      <div class="ml-1">
+                        {{ testzone.link | safe}}
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+	<br>
+
+	 <div class="dento-price-table table-responsive">
+            <table  class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Formular</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for formular in formulars %}
+                <tr align="left">
+                  <th>
+                    <div class="row">
+                      <div style="color: #2aafe8">⇒</div>
+                      <div class="ml-1">
+                        {{ formular.link | safe}}
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+	<br>
+
+	 <div class="dento-price-table table-responsive">
+            <table  class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Baza Ligjore</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for bazaligjore in bazaligjores %}
+                <tr align="left">
+                  <th>
+                    <div class="row">
+                      <div style="color: #2aafe8">⇒</div>
+                      <div class="ml-1">
+                        {{ bazaligjore.link | safe}}
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+<br>
+<!--    <div class="container" >
+      <div class="row">
+        <div class="col-4">
+          <div class="dento-price-table table-responsive">
+            <table  class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Sherbime</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for sherbime in sherbimes %}
+                <tr align="left">
+                  <th>
+                    <div class="row">
+                      <div style="color: #2aafe8">⇒</div>
+                      <div class="ml-1">
+                        {{ sherbime.link | safe}}
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="dento-price-table table-responsive">
+            <table  class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Formular</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for formular in formulars %}
+                <tr align="left">
+                  <th>
+                    <div class="row">
+                      <div style="color: #2aafe8">⇒</div>
+                      <div class="ml-1">
+                        {{ formular.link | safe}}
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div> 
+
+         <div class="col-4">
+          <div class="dento-price-table table-responsive">
+            <table  class="table table-borderless mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Baza Ligjore</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for bazaligjore in bazaligjores %}
+                <tr align="left">
+                  <th>
+                    <div class="row">
+                      <div style="color: #2aafe8">⇒</div>
+                      <div class="ml-1">
+                        {{ bazaligjore.link | safe}}
+                      </div>
+                    </div>
+                  </th>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+
+{% endblock %}
+
+

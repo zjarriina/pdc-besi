@@ -1,0 +1,143 @@
+{% load static %}
+ {% load i18n %}
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="PDC - DTI">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>{% block title %}{% trans "PDC - Directory of Information Technology " %}{% endblock %}</title>
+
+  <!-- Favicon --<link rel="icon" href="{% static 'website/img/core-img/favicon.ico' %}">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="{% static 'website/css/style.css' %} ">
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preload-content">
+      <div id="dento-load"></div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area">
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <!-- Top Content -->
+          <div class="col-6 col-md-9 col-lg-8">
+            <div class="top-header-content">
+<!--              <a class="nav-brand" href="https://e-albania.al"><img src="{% static 'website/img/core-img/ealbania.jpg' %}" alt=""></a>-->
+              <a href="#" data-toggle="tooltip" data-placement="bottom" title="069 41 11 711"><i class="fa fa-mobile"></i> <span>069 41 11 711</span></a>
+              <a href="contact.html" data-toggle="tooltip" data-placement="bottom" title="helpdesk@asp.gov.al"><i class="fa fa-envelope"></i> <span>helpdesk@asp.gov.al</span></a>
+		<a href="/admin/" data-toggle="tooltip" data-placement="bottom" title="Login"><i class="fa fa-sign-in"></i> <span>Login</span></a>
+
+            </div>
+          </div>
+          <!-- Top Header Social Info -->
+          <div class="col-6 col-md-3 col-lg-4">
+            <div class="top-header-social-info text-right">
+              <a class="nav-brand" href="/sq/"><img src="{% static 'website/img/core-img/alb.jpg' %}" alt=""></a>
+              <a class="nav-brand" href="/en/"><img src="{% static 'website/img/core-img/eng.png' %}" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Header End -->
+
+    <!-- Main Header Start -->
+    <div class="main-header-area">
+      <div class="classy-nav-container breakpoint-off">
+        <div class="container">
+          <!-- Classy Menu -->
+          <nav class="classy-navbar justify-content-between" id="dentoNav">
+
+            <!-- Logo -->
+
+            <a class="nav-brand" href="{% url 'home' %}"><img src="{% static 'website/img/core-img/logo.dti.png' %}" alt=""></a>
+
+            <!-- Navbar Toggler -->
+            <div class="classy-navbar-toggler">
+              <span class="navbarToggler"><span></span><span></span><span></span></span>
+            </div>
+
+            <!-- Menu -->
+            <div class="classy-menu">
+
+              <!-- Close Button -->
+              <div class="classycloseIcon">
+                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+              </div>
+
+              <!-- Nav Start -->
+              <div class="classynav">
+                <ul id="nav">
+                  <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                  <li><a href="{% url 'about' %}">{% trans "About" %}</a></li>
+                  <li><a href="{% url 'applications' %}">{% trans "Services" %}</a></li>
+                  <li><a href="./contact.html">{% trans "Contact" %}</a></li>
+
+                </ul>
+              </div>
+              <!-- Nav End -->
+            </div>
+
+            <!-- Booking Now Button -->
+          <!--  <a href="#" class="btn dento-btn booking-btn">Booking Now</a>  -->
+            <form  action="{% url 'searchbar' %}" method="get" class="form-inline my-2 my-lg-0">
+                <input name="search" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn dento-btn" type="submit">{% trans "Search" %}</button>
+            </form>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+{% block content %}
+
+{% endblock %}
+
+
+
+  <!-- ***** Footer Area Start ***** -->
+  <footer class=" bg-white text-dark" >
+    <!-- Copywrite Area -->
+
+          <div class="copywrite-content">
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+              All rights reserved | This website is made by DTI
+            </p>
+          </div>
+
+  </footer>
+  <!-- ***** Footer Area End ***** -->
+
+  <!-- ******* All JS ******* -->
+  <!-- jQuery js -->
+  <script src="{% static 'website/js/jquery.min.js' %}"></script>
+  <!-- Popper js -->
+  <script src="{% static 'website/js/popper.min.js' %}"></script>
+  <!-- Bootstrap js -->
+  <script src="{% static 'website/js/bootstrap.min.js' %}"></script>
+  <!-- All js -->
+  <script src="{% static 'website/js/dento.bundle.js' %}"></script>
+  <!-- Active js -->
+  <script src="{% static 'website/js/default-assets/active.js' %}"></script>
+
+</body>
+
+</html>

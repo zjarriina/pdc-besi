@@ -1,0 +1,79 @@
+p# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-08 11:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: website/templates/about.html:7
+msgid "PDC - About"
+msgstr "PDC - Rreth Nesh"
+
+#: website/templates/applications.html:6
+msgid "PDC - Applications "
+msgstr "PDC - Aplikacione"
+
+#: website/templates/base.html:13
+msgid "PDC - Directory of Information Technology "
+msgstr "PDC - Drejtoria e Teknologjise & Informacionit"
+
+#: website/templates/base.html:85
+msgid "Home"
+msgstr "Home"
+
+#: website/templates/base.html:86
+msgid "About"
+msgstr "Rreth Nesh"
+
+#: website/templates/base.html:87
+msgid "Services"
+msgstr "Sherbime"
+
+#: website/templates/base.html:88
+msgid "Contact"
+msgstr "Kontakte"
+
+#: website/templates/base.html:99
+msgid "Search"
+msgstr "Kerko"
+
+#: website/templates/contact.html:7
+msgid "PDC - Contact "
+msgstr "PDC - Kontakte"
+
+#: website/templates/contact.html:29
+msgid "Services Center"
+msgstr "Qendra Sherbimeve"
+
+#: website/templates/contact.html:33
+msgid "Phone"
+msgstr "Telefone"
+
+#: website/templates/contact.html:36
+msgid "Mobile"
+msgstr "Celular"
+
+#: website/templates/home.html:16
+msgid "Njoftimet e Fundit"
+msgstr ""
+
+#: website/templates/home.html:33
+msgid "Lexo me shume"
+msgstr ""
+
+#: website/templates/home.html:56
+msgid "Aplikacionet me te perdorura"
+msgstr ""

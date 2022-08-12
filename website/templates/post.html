@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}PDC - Njoftime {% endblock %}
+{% block content %}
+
+  <section class="dento-blog-area section-padding-100-0 clearfix">
+    <div class="container">
+  {% for i in post %}
+    <h2 align="center">
+      <a href="{{ post.get_absolute_url }}">{{ i.title }}</a>
+    </h2>
+    <h5><a>{{i.body | safe}}</a></h5>
+        {{ post.body|truncatewords:30|linebreaks }}
+    <p class="date" align="right"><i class="icon_clock_alt"></i>
+        {{ i.publish }}
+    </p>
+  {% endfor %}
+    </div>
+  </section>
+{% endblock %}

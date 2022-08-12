@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}PDC - SearchBar {% endblock %}
+{% block content %}
+
+
+{% for i in applications %}
+<center><h1><a href="/base"> {{ i.link_comment | safe}}</a></h1></center>
+{% endfor %}
+
+{% for bazaligjore in bazaligjores %}
+<center><h1><a href="/base"> {{ bazaligjore.link | safe}}</a></h1></center>
+{% endfor %}
+
+{% for testzone in tests %}
+<center><h1><a href="/base"> {{ testzone.link | safe}}</a></h1></center>
+{% endfor %}
+
+{% for formular in formulars %}
+<center><h1><a href="/base"> {{ formular.link | safe}}</a></h1></center>
+{% endfor %}
+
+{% for sherbime in sherbimes %}
+<center><h1><a href="/base"> {{ sherbime.link | safe}}</a></h1></center>
+{% endfor %}
+
+{% for manuale in manuales %}
+<center><h1><a href="/base"> {{ manuale.link | safe}}</a></h1></center>
+{% endfor %}
+
+{% for i in post %}
+<center><h1><a href="/base"> {{ i.title | safe}}</a></h1></center>
+<center><h1><a href="/base"> {{ i.body | safe }}</a></h1></center>
+{% endfor %}
+
+{% endblock %}

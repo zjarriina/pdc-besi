@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+
+
+  <!-- ***** Blog Area Start ***** -->
+ <section class="dento-blog-area mt-4 clearfix">
+
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h2>{% trans "Njoftimet e Fundit" %}</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+          {% for i in post %}
+       <div class="col-12 col-md-6 col-lg-4">
+          <div class="single-blog-item mb-100">
+
+
+            <div class="blog-content">
+              <a href="post.html" class="post-title">{{ i.title }}</a>
+              <div style="height: 210px; overflow-y: hidden;">
+                {{i.body | safe}}
+              </div>
+            <a href="post.html"  class="btn dento-btn mt-2">{% trans "Lexo me shume" %} <i class="fa fa-angle-double-right"></i></a>
+
+                <br>
+                <br>
+              <div class="post-meta">
+                <a href="#"><i class="icon_clock_alt"></i>{{ i.publish }}</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+           {% endfor %}
+      </div>
+    </div>
+ </section>
+
+ <!-- *****  Area Start ***** -->
+
+    <div class="container">
+      <div class="row">
+        <!-- Section Heading -->
+        <div class="col-12">
+          <div class="section-heading text-center">
+            <h2>{% trans "Aplikacionet me te perdorura" %}</h2>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+{% for i in mostusedapp %}
+        <!-- Single  Area -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="single-dentist-area ">
+              <a>{{i.link | safe}}</a>
+            <!--  Content -->
+            <div class="dentist-content">
+
+              <!-- Info -->
+              <div class="dentist-info bg-gradient-overlay">
+                <h5>{{i.title | safe}}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          {% endfor %}
+      </div>
+    </div>
+
+
+
+
+{% endblock %}
